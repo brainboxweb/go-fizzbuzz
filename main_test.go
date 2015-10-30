@@ -47,3 +47,9 @@ func TestFizzBuzz(t *testing.T) {
 		}
 	}
 }
+
+func BenchmarkFizzBuzz(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		FizzBuzz(i)
+	}
+}
