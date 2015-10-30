@@ -2,15 +2,9 @@ package main
 
 func FizzBuzz(input int) string {
 
-	switch {
-		case input%15 == 0:
-			return "FizzBuzz"
-		case input%3 == 0:
-			return "Fizz"
-		case input%5 == 0:
-			return "Buzz"
-		default:
-			return ""
-	}
+	result := ""
+	if input%3 == 0 {result += "Fizz"}
+	if input%5 == 0 {result += "Buzz"}
 
+	return result
 }
